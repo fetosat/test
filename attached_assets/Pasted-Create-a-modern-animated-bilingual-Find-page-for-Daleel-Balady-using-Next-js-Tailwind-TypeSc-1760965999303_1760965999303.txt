@@ -1,0 +1,156 @@
+Create a modern, animated, bilingual “Find” page for Daleel Balady using Next.js + Tailwind + TypeScript + Framer Motion + Leaflet + Shadcn/UI.
+
+⚙️ Page Overview
+
+The page name: FindPage
+Purpose: let users find local services by selecting a category, viewing results visually (grid, list, or map), and filtering through subcategories.
+Supports: Dark/Light Mode, Arabic/English localization, Animated UI/UX, and Responsive layout.
+
+🧩 Functional Requirements
+
+Category Selector (Top Section)
+
+Horizontal scrollable carousel (Framer Motion + Tailwind scroll-snap).
+
+Each category has an icon, color, and title (Arabic + English).
+
+Smooth hover and tap animations.
+
+Selecting a category loads mock results for that category.
+
+Example: 🩺 Medical, 🔧 Services, 🏠 Real Estate, ⚖️ Legal, 🧱 Engineering.
+
+Subcategory Tree View / Filter
+
+When a category is selected, show a collapsible tree view on the left (use Shadcn Accordion or custom motion div).
+
+Each subcategory acts as a filter.
+
+Include subtle transition animations on expand/collapse.
+
+Results View Modes
+
+Toggle between 3 views:
+
+Grid view: cards with image, title, rating, distance, and “Call / Directions” buttons.
+
+List view: full-width rows with icons and info.
+
+Map view: Leaflet map (OpenStreetMap tiles).
+
+View mode toggle (Grid / List / Map) in the top-right.
+
+Map (Leaflet Integration)
+
+Use react-leaflet with OpenStreetMap.
+
+Show colored category-based pins (mock long/lat).
+
+Popup on click with business info.
+
+Smooth zoom and clustering.
+
+Results Cards
+
+Use category colors + icons.
+
+Include motion hover effects and entry animations.
+
+Show title, rating, distance, category icon, and “Contact” buttons.
+
+Localization (AR/EN)
+
+Use next-intl or next-i18next.
+
+RTL for Arabic, LTR for English.
+
+Language switcher in navbar or floating toggle.
+
+Text for UI labels (Category, Filters, View, etc.) auto-switches based on language.
+
+Dark/Light Mode
+
+Use next-themes or Tailwind dark mode.
+
+Animated transitions between modes.
+
+General Animations
+
+On-scroll fade-in sections (Framer Motion whileInView).
+
+Sliding categories and filters.
+
+Animated cards and icons.
+
+Responsive Design
+
+Works perfectly on mobile, tablet, and desktop.
+
+Collapsible filter sidebar on mobile.
+
+Sticky category bar at top for mobile UX.
+
+🎨 Design Style Guide
+
+Primary Color: #0ea5e9 (Sky Blue)
+
+Secondary: #10b981 (Emerald)
+
+Backgrounds: #f9fafb light / #0f172a dark
+
+Typography: Modern rounded sans (e.g., Inter, Cairo for Arabic)
+
+Border radius: rounded-2xl
+
+Shadow: Soft glow (Tailwind shadow-lg shadow-sky-500/10)
+
+Motion Curve: easeInOut, duration 0.4s
+
+💾 Mock Data Example
+const mockResults = [
+  {
+    id: 1,
+    name: "عيادة الدكتور أحمد / Dr. Ahmed Clinic",
+    category: "Medical",
+    subcategory: "طبيب أسنان / Dentist",
+    lat: 30.0444,
+    lng: 31.2357,
+    rating: 4.8,
+    distance: "2.1 km",
+    phone: "01012345678",
+  },
+  {
+    id: 2,
+    name: "نجار المنصورة / Mansoura Carpenter",
+    category: "Services",
+    subcategory: "نجار / Carpenter",
+    lat: 31.0419,
+    lng: 31.3785,
+    rating: 4.6,
+    distance: "4.5 km",
+    phone: "01087654321",
+  },
+];
+
+🧠 Extra Features (optional, if time allows)
+
+Floating “Filter” button on mobile with modal filters.
+
+Search bar with live suggestions.
+
+User location detection (HTML Geolocation API).
+
+Smart sorting (nearest / highest rated).
+
+Animated skeleton loader on data fetch.
+
+📜 AI Prompt (Final Version)
+
+Prompt:
+
+“Create a fully interactive bilingual page called Find using Next.js + Tailwind + TypeScript + Framer Motion + Shadcn/UI + Leaflet.
+The page allows users to select a category (animated horizontal carousel), view subcategories in a collapsible filter tree, and display results in grid, list, or map views with category-colored markers.
+Include dark/light mode, Arabic-English localization (RTL/LTR), and smooth animations on scroll, hover, and transitions.
+Add mock data with latitude/longitude and use OpenStreetMap.
+Design it at a senior UI/UX designer level with modern, elegant visuals and delightful motion.
+Follow Daleel Balady’s brand theme: blue + emerald palette, rounded shapes, soft shadows, and Arabic/English typography (Inter + Cairo).”

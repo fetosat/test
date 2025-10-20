@@ -1,0 +1,221 @@
+Project Name: Daleel Balady – Egypt’s Smart Local & Services Hub
+
+Design Goal:
+Create a bilingual (Arabic/English), ultra-modern, motion-rich landing page for a web platform that connects users with local businesses, service providers, e-commerce, and delivery — all across Egypt.
+The page should blend aesthetics from Apple, Stripe, and Notion, while preserving local warmth and community trust.
+
+Tech Stack for export:
+
+Next.js (App Router)
+
+Tailwind CSS
+
+shadcn/ui
+
+Framer Motion (for animations)
+
+i18next (for localization)
+
+🎨 Brand Identity
+
+Name: Daleel Balady
+Tagline:
+
+🇦🇪 "كل خدمات بلدك في مكان واحد"
+
+🇬🇧 "All your local services in one place"
+
+Brand Voice: Smart · Local · Trustworthy · Dynamic · Empowering
+
+Color Palette (Dark/Light System):
+
+Primary: #2563EB (Blue)
+
+Accent: #16A34A (Green)
+
+Highlight: #FACC15 (Warm Yellow)
+
+Light BG: #F9FAFB
+
+Dark BG: #0F172A
+
+Text Light: #1E293B
+
+Text Dark: #E2E8F0
+
+Typography:
+
+Arabic: “Cairo” or “Tajawal”
+
+English: “Inter” or “Poppins”
+
+Big, bold headlines · clean subtext · elegant line spacing
+
+⚙️ Global Features
+
+Dark/Light Mode toggle (auto + manual)
+
+Arabic ↔ English language toggle
+
+Smooth scroll-based animations using Framer Motion + Intersection Observer
+
+Animated hero illustrations (subtle gradient waves, floating icons, map pins)
+
+Carousels: sliding categories, trending offers, featured businesses
+
+Interactive hover effects on cards (tilt, scale, glow)
+
+Parallax motion in hero and “Why Choose Us” sections
+
+Floating CTA button visible on scroll (Join Now / Browse Businesses)
+
+🧩 Page Structure
+1️⃣ Navbar (Sticky, Glassmorphism)
+
+Transparent background with blur and smooth fade-in on scroll
+
+Left: Logo + name (Daleel Balady)
+
+Center: Nav links → Home · Categories · Offers · Join Us · Contact
+
+Right: Language toggle (AR / EN) + Theme toggle + “Join as Provider” CTA button
+
+2️⃣ Hero Section (Animated)
+
+Fullscreen responsive hero
+
+Background: gradient waves + floating map pins of Egypt’s cities
+
+Headline (bilingual):
+
+AR: “كل خدمات بلدك في مكان واحد”
+
+EN: “All Your Local Services in One Place”
+
+Subtext: “Search, discover, and connect with trusted providers near you.”
+
+CTA Buttons: “ابدأ البحث / Start Searching” + “انضم الآن / Join Now”
+
+Animated search bar with category dropdown + auto-suggest animation
+
+Illustration: 3D isometric city map or fluid vector cityscape
+
+3️⃣ Sliding Categories Section
+
+Title bilingual: “استكشف حسب الفئة / Explore by Category”
+
+Horizontal scroll (Framer Motion drag or carousel)
+
+Category cards with icon + image background (Medical, Shops, Engineering, Food, Cars, etc.)
+
+Hover animation: card lifts + glow border
+
+4️⃣ Top Offers Section (Sliding / Dynamic)
+
+Auto-sliding carousel of business promotions or featured shops
+
+Each card: image, offer title, location, “Book Now” / “Call” button
+
+Light parallax effect and progress dots
+
+5️⃣ How It Works (Animated Steps)
+
+Three interactive cards with scroll animations
+
+Step 1: Search → glowing magnifier animation
+
+Step 2: Book → expanding calendar effect
+
+Step 3: Save → floating coin animation
+
+6️⃣ Why Choose Daleel Balady
+
+Split layout with subtle parallax background
+
+Icons with micro animations
+
+Focus points: AI-powered search, verified providers, delivery integration, nationwide coverage
+
+7️⃣ E-commerce & Delivery Preview
+
+Animated mockup of product browsing + delivery tracking
+
+Mini order card sliding in from the side
+
+“Shop smart · Deliver fast” bilingual tagline
+
+8️⃣ Testimonials (Scroll Fade + Carousel)
+
+Smooth slider with customer avatars
+
+Bilingual reviews (RTL/LTR switch)
+
+Motion: fade + slide on scroll
+
+9️⃣ Join as Provider CTA
+
+Full-width banner with gradient and subtle pulse animation
+
+AR: “انضم إلى دليل بلدي ووسع نطاق عملك”
+
+EN: “Join Daleel Balady and grow your business today”
+
+Button: “ابدأ التسجيل / Start Registration”
+
+🔟 Footer
+
+Dual-column bilingual layout
+
+Logo + short description
+
+Quick links + contact info + social icons
+
+Language and theme toggles repeated
+
+Copyright bilingual notice
+
+🪄 Animation Direction
+
+Use Framer Motion for reveal-on-scroll (fade-up, slide-in, staggered children)
+
+Use Lenis or Locomotive Scroll for smooth scroll
+
+Parallax background layers (city silhouette, gradient waves)
+
+Floating icons in hero (soft oscillation)
+
+Carousel motion with inertia and drag constraints
+
+Dark mode transitions with soft fade
+
+🧠 UX Design Philosophy
+
+Minimal friction: users can reach their goal (search / join / discover) in 2 clicks.
+
+Motion = meaning: each animation guides the eye.
+
+Local feel, global quality: integrate Egyptian cultural hints (colors, typography, small details) while keeping a Silicon Valley-grade polish.
+
+Accessibility: ARIA labels, large contrast ratios, bilingual screen-reader labels.
+
+📦 Deliverables Expected
+
+High-fidelity responsive mockup (desktop / tablet / mobile)
+
+Two themes (Dark / Light)
+
+Bilingual (RTL / LTR) layouts
+
+Interactive prototype with scroll & hover animations
+
+Organized export-ready component structure matching Next.js + Tailwind + shadcn/ui standards
+
+🧾 Bonus Notes
+
+Add small touches like animated number counters for “Businesses Listed”, “Active Users”, etc.
+
+Show live city-based map pins with glowing effects (like Egypt map heatmap)
+
+Include a subtle gradient mesh or motion background to give depth
+
+Ensure UI respects fluid typography and container queries

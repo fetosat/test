@@ -76,9 +76,16 @@ export function Navbar() {
             >
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            <Button variant="default" size="sm" data-testid="button-join-provider">
-              {t("nav.joinProvider")}
-            </Button>
+            <Link href="/admin">
+              <Button variant="outline" size="sm">
+                Admin
+              </Button>
+            </Link>
+            <Link href="/provider">
+              <Button variant="default" size="sm" data-testid="button-join-provider">
+                {t("nav.joinProvider")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

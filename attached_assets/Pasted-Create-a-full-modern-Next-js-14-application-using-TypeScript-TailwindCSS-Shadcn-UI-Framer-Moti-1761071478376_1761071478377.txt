@@ -1,0 +1,237 @@
+Create a full modern Next.js 14 application using TypeScript + TailwindCSS + Shadcn/UI + Framer Motion + React Hook Form + Leaflet + next-themes + next-i18next, designed for Daleel Balady (a bilingual directory and service platform).
+
+Implement the following pages and requirements with premium, animated, glassmorphism design (modern gradients, sliding sections, soft glows, motion transitions everywhere).
+
+🗺️ FIND PAGE (Main Search Page)
+
+Purpose: Help users find nearby services or providers through advanced filters, categories, and map visualization.
+
+UI/UX Requirements:
+
+Top Section:
+
+Glassmorphic horizontal category selector with icons.
+
+Smooth scroll with inertia and drag (Framer Motion + snap scroll).
+
+Each category is smaller and compact so all categories can fit or scroll elegantly.
+
+Active category highlights with gradient border + icon animation.
+
+Filter Section:
+
+Floating glass card with animated entry and sticky position.
+
+Filters include:
+
+Search Type Toggle: Normal Search / Location-based Search
+
+If location-based: show a radius slider (1–50 km)
+
+Price Range: Min–Max slider
+
+Time Range: e.g., “Open Now,” “Morning,” “Evening”
+
+Order By Dropdown:
+
+Reviews
+
+Recommendation
+
+Location
+
+Customers
+
+Rating
+
+Recent
+
+Add filter chip animation when active.
+
+Results Section:
+
+Grid, List, and Map view toggles (top-right buttons).
+
+Animated cards (category-colored gradients + motion hover).
+
+Smooth transition between grid/list/map views.
+
+Map Integration:
+
+Full-featured Leaflet map with OpenStreetMap tiles.
+
+Use mock data with lat/lng.
+
+Animated category-based pins with hover effects and popups.
+
+Cluster nearby points dynamically.
+
+Add user location detection (HTML geolocation API) and animated marker.
+
+Animations:
+
+On-scroll fade-ins for cards and filters.
+
+Smooth transitions between view types.
+
+Floating subtle particle motion in background (optional).
+
+Localization:
+
+Arabic (RTL) and English (LTR).
+
+Switcher toggle persists in local storage.
+
+All UI text is bilingual.
+
+Dark/Light Mode:
+
+Animated transition between modes.
+
+Glassmorphism + soft shadows in both themes.
+
+💎 PRICING PAGE
+
+Purpose: Show subscription plans for both Users and Providers.
+
+UI/UX Requirements:
+
+Layout:
+
+Two sections: User Plans and Provider Plans.
+
+Each section is in a sliding glass panel (horizontal carousel or tabs).
+
+Floating glowing borders and frosted glass effect (Tailwind backdrop-blur-xl bg-white/10 dark:bg-slate-900/50).
+
+Animated transitions between tabs.
+
+Plans:
+
+Use cards with soft gradient backgrounds.
+
+Include name, price, features, and CTA button (“Subscribe” / “Upgrade”).
+
+On hover: slight tilt + floating animation.
+
+Add “Recommended” plan ribbon with glowing pulse.
+
+Animations:
+
+Page load fade-in.
+
+Parallax scrolling in background.
+
+Floating elements that move subtly (Framer Motion keyframes).
+
+Responsive Design:
+
+Mobile: stacked plans with sliding carousel.
+
+Desktop: 3 or 4-column grid layout.
+
+🔐 AUTH PAGES
+
+Pages:
+
+/login
+
+/signup
+
+UI/UX:
+
+Glassmorphic floating login form centered on screen.
+
+Animated form transitions and focus effects.
+
+Social login buttons:
+
+“Continue with Google” (Google Icon)
+
+“Continue with Facebook” (Facebook Icon)
+
+Option to switch between Arabic and English.
+
+On submit: form validation + mock success animation.
+
+Use Tailwind + Framer Motion for smooth transitions.
+
+Add subtle floating background gradient animations.
+
+🏢 STATIC PAGES
+
+Implement the following pages under /company route:
+
+Company
+
+About Us
+
+Careers
+
+Blog
+
+Support
+
+Help Center
+
+Privacy Policy
+
+Terms of Service
+
+Notes:
+
+Each page uses a shared layout component with:
+
+Animated page title section.
+
+Smooth fade-in paragraphs.
+
+Elegant typography.
+
+Breadcrumb navigation.
+
+Blog page supports simple mock blog cards with image + title + date.
+
+🎨 Design Language
+
+Primary Color: #0ea5e9 (Sky Blue)
+
+Secondary: #10b981 (Emerald)
+
+Accent Gradient: from-sky-400 to-emerald-400
+
+Font: Inter (English) + Cairo (Arabic)
+
+Border Radius: 2xl
+
+Shadows: soft glow (shadow-lg shadow-sky-400/10)
+
+Motion Timing: easeInOut with 0.4s duration
+
+Glassmorphism: backdrop-blur-xl bg-white/10 border border-white/20
+
+⚡ Development Notes
+
+Use Shadcn components for tabs, buttons, sliders, accordions, and dropdowns.
+
+Use Framer Motion for all animations and transitions.
+
+Use Leaflet + React-Leaflet for map rendering and markers.
+
+Mock data for now (services, coordinates, pricing tiers).
+
+Fully responsive and optimized for mobile.
+
+Output:
+
+TypeScript + Next.js 14 app
+
+TailwindCSS
+
+Shadcn/UI components
+
+i18n with Arabic/English support
+
+Dark/Light mode toggle
+
+Fully animated, modern, premium UI experience.

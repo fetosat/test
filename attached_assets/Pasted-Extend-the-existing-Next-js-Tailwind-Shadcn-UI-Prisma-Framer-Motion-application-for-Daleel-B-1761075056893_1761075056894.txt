@@ -1,0 +1,291 @@
+Extend the existing Next.js + Tailwind + Shadcn/UI + Prisma + Framer Motion application for Daleel Balady, by adding two full dashboards:
+
+Admin Dashboard
+
+Provider Dashboard
+
+Both dashboards must follow the same global theme and UI system (glassmorphism, soft gradients, modern typography, floating cards, Framer Motion animations).
+Use Arabic/English localization, Dark/Light mode, and consistent layout with sidebar navigation.
+
+🧭 SHARED LAYOUT
+
+Use a responsive sidebar with icons + tooltips.
+
+Top bar includes:
+
+Search bar (with AI suggestions placeholder)
+
+Notifications dropdown
+
+User avatar with dropdown (Profile, Settings, Logout)
+
+Language switcher (AR/EN)
+
+Dark/Light mode toggle
+
+Animated transitions between sections with page fade + slide-in.
+
+🧑‍💼 ADMIN DASHBOARD
+
+Purpose: Full control over users, providers, listings, services, bookings, payments, and analytics.
+
+Pages:
+1️⃣ Dashboard Overview
+
+KPIs cards (total users, active providers, bookings today, revenue, pending verifications)
+
+Animated charts (use Recharts or Chart.js)
+
+Activity timeline (recent signups/bookings)
+
+2️⃣ Users Management
+
+Table view with pagination
+
+Columns: Name, Email, Role, Status, Joined Date
+
+Filters: Role, Status, Date range
+
+Actions: Edit, Suspend, Delete, View Profile
+
+3️⃣ Providers Management
+
+Table view for all providers
+
+Columns: Business Name, Owner, Category, Status, Rating, Joined Date
+
+Actions: Approve, Suspend, View Details
+
+Integration-ready for provider verification workflow
+
+4️⃣ Listings
+
+All provider listings in one view
+
+Show: Title, Category, Location, Status, Rating, Created Date
+
+Filters by category, approval status, or provider
+
+View button opens a detailed drawer or modal with full info
+
+5️⃣ Services
+
+Show all sub-services attached to listings
+
+Columns: Service Name, Price, Duration, Provider, Status
+
+6️⃣ Bookings
+
+Table view + calendar view switch
+
+Show all bookings with status (Pending, Confirmed, Completed, Cancelled)
+
+Filters: Date, Provider, Service, Status
+
+Actions: Approve, Cancel, View Details
+
+7️⃣ Payments
+
+Table of all transactions
+
+Columns: User, Provider, Amount, Status, Method, Date
+
+Integration-ready for Paymob or Stripe
+
+8️⃣ Reviews
+
+List of all reviews and ratings
+
+Filters: Category, Provider, Rating range
+
+9️⃣ System Settings
+
+Manage platform configuration (plans, discount rates, integrations)
+
+Environment variable management UI (mocked for now)
+
+🔟 Analytics
+
+Charts for:
+
+Monthly active users
+
+Category performance
+
+Booking volume
+
+Provider growth
+
+Average rating trends
+
+🧑‍🔧 PROVIDER DASHBOARD
+
+Purpose: Manage their business profile, listings, services, bookings, and analytics.
+
+Pages:
+1️⃣ Overview
+
+Summary cards: Bookings Today, Pending Reviews, Earnings This Month, New Messages
+
+Graphs for booking trends and customer growth
+
+2️⃣ My Listings
+
+Table or card view of all listings by this provider
+
+Fields (match DB schema from Daleel Balady backend):
+
+Listing ID
+
+Name
+
+Category
+
+Subcategory
+
+Address
+
+Description
+
+Contact info
+
+Price range
+
+Status (Active/Pending/Hidden)
+
+Actions: Edit, View, Pause, Delete
+
+Under each listing: nested collapsible “Services” table.
+
+3️⃣ Services
+
+Each service linked to a listing
+
+Fields:
+
+Service Name
+
+Description
+
+Duration
+
+Price
+
+Status
+
+Actions: Add / Edit / Delete
+
+4️⃣ Bookings (Most Important)
+
+Calendar View:
+
+Use a calendar component (React Big Calendar or FullCalendar)
+
+Each day shows the number of bookings
+
+Colors by booking status:
+
+🟡 Pending
+
+🟢 Confirmed
+
+🔴 Cancelled
+
+🔵 Completed
+
+Clicking a date shows all bookings for that day in a side panel or modal.
+
+List View:
+
+Columns: Booking ID, Customer, Service, Time, Status, Notes
+
+Filters: Date range, Status, Service type
+
+Quick actions: Approve, Reschedule, Cancel
+
+5️⃣ Customers
+
+Table of all customers who booked their services
+
+Columns: Name, Contact Info, Total Bookings, Last Booking Date
+
+6️⃣ Earnings
+
+Chart for income over time
+
+Table for transactions (Booking ID, Date, Amount, Status)
+
+Filters by date range or service
+
+7️⃣ Reviews
+
+List and average rating for their services
+
+Ability to reply to reviews
+
+8️⃣ Messages
+
+Real-time chat (Socket.IO integrated placeholder)
+
+Sidebar for conversation list
+
+Animated message bubbles
+
+9️⃣ Settings
+
+Manage:
+
+Business Info (name, category, address)
+
+Availability (working hours per day)
+
+Payment preferences
+
+Profile picture & gallery upload (Multer integration)
+
+🧱 Data Integration Notes
+
+Match data models exactly to Daleel Balady backend (from Prisma schema).
+
+Ensure the dashboard fetches mock data for now but is integration-ready.
+
+🎨 Design System & Animations
+
+Maintain glassmorphism, gradients, soft shadows, and animated transitions.
+
+Use Framer Motion for:
+
+Page transitions
+
+Table row fade-ins
+
+Sidebar expand/collapse
+
+Chart load animations
+
+Color-coded status tags across all pages.
+
+Tooltips, hover effects, and floating motion cards.
+
+⚡ Tech Stack
+
+Next.js 14 App Router
+
+TypeScript
+
+TailwindCSS + Shadcn/UI + Framer Motion
+
+Recharts or Chart.js for analytics
+
+React Big Calendar or FullCalendar for bookings
+
+React Query for data fetching
+
+i18next for localization
+
+next-themes for dark/light mode
+
+Role-based routing (Admin / Provider)
+
+Output:
+A fully animated, modern, bilingual dashboard experience for both admin and providers — visually matching Daleel Balady’s main app, responsive, ready for real backend integration, and structured using best UI/UX practices.
